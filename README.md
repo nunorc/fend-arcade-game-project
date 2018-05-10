@@ -1,7 +1,7 @@
 
 # Classic Arcade Game Project
 
-Prepared in the context of Udacity's Front End Develepor nanodegree.
+Prepared in the context of Udacity's Front End Developer nanodegree.
 
 ## How The Game Works
 
@@ -12,3 +12,4 @@ speeds on the paved block portion of the scene. Once a the player collides
 with an enemy, the game is reset and the player moves back to the start
 square. Once the player reaches the water the game is won.
 
+[Play the game!](https://nunorc.github.io/fend-arcarde-game-project/)

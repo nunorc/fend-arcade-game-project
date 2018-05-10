@@ -7,7 +7,7 @@ const MIN_DIST  = 50;              // minimum collision distance
 //// Auxiliary functions
 // Random enemy position in the X axis
 function randomX() {
-    return -300 + Math.floor(Math.random()*200);
+    return -200 + Math.floor(Math.random()*200);
 }
 // Get a random lane (1 out of 3) for an enemy
 function randomLane() {
@@ -15,7 +15,7 @@ function randomLane() {
 }
 // Get a random speed for an enemy
 function randomSpeed() {
-    return 140 + Math.floor(Math.random()*80);
+    return 160 + Math.floor(Math.random()*80);
 }
 // Show message in info box
 function infoBox(text) {
@@ -117,7 +117,7 @@ Player.prototype.render = function() {
     ctx.drawImage(Resources.get(this.sprite), this.x, this.y)
 };
 Player.prototype.handleInput = function(key) {
-    // update player posistion according to key press
+    // update player position according to key press
     // keeping the player inside the board
     if (key == 'left' && this.x >= 101)
         this.x -= 101;
@@ -127,8 +127,6 @@ Player.prototype.handleInput = function(key) {
         this.y -= 80;
     if (key == 'down' && this.y <= 300)
         this.y += 80;
-
-        console.log('x: '+this.x+' y: '+this.y);
 };
 Player.prototype.checkCollisions = function() {
     let collision = false;
@@ -136,7 +134,6 @@ Player.prototype.checkCollisions = function() {
     allEnemies.forEach(function(e) {
         // calculate the euclidean distance between the player and enemy
         const d = Math.sqrt( (e.x-player.x)**2 + (e.y-player.y)**2 );
-        //console.log("player: "+player.x+","+player.y+"  distance: "+d);
         // if the distance is less than the defined threshold a collision is found
         if (d < MIN_DIST)
             collision = true;
@@ -152,7 +149,6 @@ Player.prototype.checkVictory = function() {
 let allEnemies, player;
 startGame();
 
-
 //// Event listeners
 // This listens for key presses and sends the keys to the
 // Player.handleInput() method
@@ -160,3 +156,4 @@ document.addEventListener('keyup', function(e) {
     var allowedKeys = { 37: 'left', 38: 'up', 39: 'right', 40: 'down' };
     player.handleInput(allowedKeys[e.keyCode]);
 });
+
