@@ -3,6 +3,8 @@
 
 Prepared in the context of Udacity's Front End Developer nanodegree.
 
+[Play the game online!](https://nunorc.github.io/fend-arcarde-game-project/)
+
 ## How The Game Works
 
 In this game you have a Player and Enemies (Bugs). The goal of the player
@@ -12,4 +14,8 @@ speeds on the paved block portion of the scene. Once a the player collides
 with an enemy, the game is reset and the player moves back to the start
 square. Once the player reaches the water the game is won.
 
-[Play the game!](https://nunorc.github.io/fend-arcarde-game-project/)
+## Run The Game Locally
+
+To run the game locally open the `index.html` file in your browser.
+
+
